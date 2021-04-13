@@ -10,11 +10,11 @@
   (def numero_p (positivo num 0))
   (if (<= numero_p 25)(char (+ numero_p valor_ascii))))
 
-(defn numero_corridas
-  [char key]
+(defn numero_corridas[char key]
   (valor_caracter (mod (+ (valor_entero char) key) 26)))
 
-(def encriptar (mapv #(numero_corridas % 2) "mario"))
+(def encriptar (mapv #(numero_corridas % 3) "mario"))
+
 (def resultado (apply str encriptar))
 
 println(str "Cifrado cesar: " resultado)
