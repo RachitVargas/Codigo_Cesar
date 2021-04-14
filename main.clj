@@ -20,8 +20,7 @@
 (def cantidad_corridas 2)
 
 (def codificar (mapv #(numero_corridas % cantidad_corridas)mensaje))
-(def resultado (apply str cifrar))
+(def resultado (apply str codificar))
 
 println(str "Mensaje original: " mensaje)
 println(str "Mensaje encriptado con el Cifrado Cesar: " resultado)
-
