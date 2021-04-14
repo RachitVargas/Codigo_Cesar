@@ -16,11 +16,12 @@
 (defn numero_corridas[char key]
   (valor_caracter (mod (+ (valor_entero char) key) 26)))
 
-(def mensaje "Hola Mundo")
+(def mensaje "Mario")
 (def cantidad_corridas 2)
 
 (def codificar (mapv #(numero_corridas % cantidad_corridas)mensaje))
-(def resultado (apply str codificar))
+(def cifrado (apply str codificar))
 
 println(str "Mensaje original: " mensaje)
-println(str "Mensaje encriptado con el Cifrado Cesar: " resultado)
+println(str "Mensaje encriptado con el Cifrado Cesar: " cifrado)
+
