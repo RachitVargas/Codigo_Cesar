@@ -1,5 +1,3 @@
-(def valor_ascii (int \a))
-
 (defn valor_caracter [num]
   (def numero_positivo 
   (cond (> num 0)(- num 0) :else (- 0 num)))  
@@ -7,6 +5,7 @@
   :else "Ha ocurrido un error"))
 
 (defn numero_corridas[char key]
+  (def valor_ascii (int \a))
   (valor_caracter (mod (+ (-(int char)valor_ascii) key) 26)))
 
 (def mensaje "Rachit")
@@ -17,4 +16,3 @@
 
 println(str "Mensaje original: " mensaje)
 println(str "Mensaje encriptado con el Cifrado Cesar: " cifrado)
-
